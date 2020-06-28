@@ -1,0 +1,351 @@
+/* Default Browser Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.flip-card-container {
+  width: 400px;
+  height: 700px;
+  perspective: 2000px;
+  margin-top: 3%;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  box-shadow: 0px 0px 20px 0px lightgrey;
+}
+
+/* used to rotate the containing flip-card div layer so that 
+the flip-back-card div layer is visible */
+
+.flip-card-container .click-flip {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* front card children styling */
+.flip-card-front {
+  background-color: white;
+}
+
+.institution-image-container img {
+  width: 100%;
+  /* height: auto; */
+}
+
+.challenge-details {
+  width: 100%;
+  height: 53%;
+  padding: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.challenge-title h2 {
+  font-size: 2.5rem;
+  color: #8650a5;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.challenge-title h4 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 400;
+}
+
+.challenge-summary {
+  width: 100%;
+  height: 30%;
+  font-size: 2rem;
+  color: #afb6ba;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+/* Progress bar component front-flip-card div layer */
+.progress-bar-container {
+  width: 100%;
+  height: 30%;
+  font-size: 1.9rem;
+  font-weight: 200;
+  color: #afb6ba;
+}
+
+.progress-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  margin-bottom: 3%;
+  color: black;
+}
+
+.progress-bar-container progress {
+  width: 100%;
+  height: 35%;
+  border-radius: 0;
+  margin-bottom: 3%;
+}
+
+progress::-webkit-progress-bar {
+  background: lightgray;
+}
+
+progress::-webkit-progress-value {
+  background: #8650a5;
+}
+
+.progress-subheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.donation-sum-container p:nth-child(1) {
+  margin-right: 5px;
+  color: black;
+  font-weight: 400;
+}
+
+.donation-sum-container {
+  display: flex;
+}
+
+/* Backside of the card styles */
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.back-side-details {
+  height: 100%;
+  justify-content: normal;
+}
+
+.back-side-title {
+  text-align: center;
+  margin-bottom: 7%;
+}
+/* Table Styling */
+.donor-table-container {
+  width: 100%;
+  height: 60%;
+  margin-bottom: 15%;
+  font-size: 1.7rem;
+  color: #afb6ba;
+}
+
+.donor-table-container table {
+  width: 100%;
+  height: 100%;
+}
+
+.donor-table-container td,
+th {
+  border-bottom: 2px solid #f7f6f7;
+  border-top: 2px solid #f7f6f7;
+  height: 6%;
+  width: 10%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.donor-table-container td {
+  font-weight: 200;
+}
+
+.donor-table-container th {
+  font-weight: 400;
+}
+
+.donor-table-container td:nth-child(1),
+.donor-table-container th:nth-child(1) {
+  text-align: left;
+  width: 25%;
+}
+
+.donor-table-container td:nth-child(2),
+.donor-table-container th:nth-child(2) {
+  width: 25%;
+}
+
+.donor-table-container tr:nth-child(1) {
+  color: black;
+  font-size: 1.7rem;
+}
+
+/* back side card gift button and amount raised total */
+.gift-total-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+}
+
+.gift-total-container button {
+  width: 60%;
+  height: 30%;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #8650a5;
+  border-radius: 20px;
+  border: none;
+}
+
+.gift-total-container p {
+  font-size: 2.8rem;
+}

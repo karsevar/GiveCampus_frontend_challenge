@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiveCampus Frontend Challenge</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/fetchData.js" async></script>
+  </head>
+  <body>
+    <div class="flip-card-container">
+      <div class="flip-card">
+        <div class="flip-card-front">
+          <div class="institution-image-container">
+            <img
+              src="./images/architecture-building-campus-clark-hall-207684.jpg"
+            />
+          </div>
+          <div class="challenge-details">
+            <div class="challenge-title front-side-title">
+              <h2>Class of 2017 Challenge</h2>
+              <h4>For College of the Holy Cross</h4>
+            </div>
+            <div class="challenge-summary">
+              <p>
+                $25,000 is on the line. Please make a gift today to honor Dean
+                Paco and help 2017 reach 60%!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card-back">
+          <div class="challenge-details back-side-details">
+            <div class="challenge-title back-side-title">
+              <h2>Class of 2017 Challenge</h2>
+              <h4>Top 10 donors</h4>
+            </div>
+            <div class="donor-table-container"></div>
+            <div class="gift-total-container">
+              <button>MAKE A GIFT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
