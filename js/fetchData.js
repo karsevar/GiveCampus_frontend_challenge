@@ -1,5 +1,3 @@
-/* Will need to build out a small server to serve the json 
-data. For now I will just use the json data in this file */
 /* 
 Dom component that creates the progress bar on the front-flip-card
 div container. Data will be received from a fetch call to the 
